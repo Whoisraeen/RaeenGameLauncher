@@ -1,0 +1,26 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "lib": ["ES2020"],
+    "outDir": "dist/main",
+    "noEmit": false,
+    "skipLibCheck": true,
+    "paths": {
+      "@main/*": ["src/main/*"],
+      "@shared/*": ["src/renderer/shared/*"],
+      "@types/*": ["src/renderer/shared/types/*"]
+    }
+  },
+  "include": [
+    "src/main/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "src/renderer",
+    "src/preload"
+  ]
+}

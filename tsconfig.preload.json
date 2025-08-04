@@ -1,0 +1,26 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "lib": ["ES2020", "DOM"],
+    "outDir": "dist/preload",
+    "noEmit": false,
+    "skipLibCheck": true,
+    "paths": {
+      "@preload/*": ["src/preload/*"],
+      "@shared/*": ["src/renderer/shared/*"],
+      "@types/*": ["src/renderer/shared/types/*"]
+    }
+  },
+  "include": [
+    "src/preload/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "src/renderer",
+    "src/main"
+  ]
+}
